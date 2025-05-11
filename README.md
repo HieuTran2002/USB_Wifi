@@ -1,10 +1,10 @@
 # Project: REMOTE WIFI
 - [x] Explorer hardware/software requirement.
-    - Hardware:
+    - Hardware requirement:
         - USB OTG Full speed.
         - SDIO/SPI support for interfacing with Micro SD.
         - Wifi capability.
-    - Software:
+    - Software requirement:
         - Firmware/Driver for SDMMC/USB-OTG-FS.
 - [x] Evaluate differnce solutions.
     - ~~High-end ARM(STM32H7xx) + ESP32(S3/C6)~~
@@ -14,8 +14,26 @@
         - Slightly cheaper compare to S3, but hard to find.
     - ESP32 S3 👌.
         - Fully support USB-OTG FS and SDIO/SDMMC.
-- [ ] Software development:
-    - [ ] USB MSC firmware.
-    - [ ] SDIO/SDMMC firmware.
 
+## Decide hardware and techstack.
+- Hardware:
+    - ESP32-S3.
+    - SDIO.
+    - USB-OTG FS.
+- Software:
+    - SDMMC (interfacing with SD card).
+    - HTTP (file transfering), mDNS.
+    - tinyUSB (USB library).
 
+# Development process.
+- [ ] firmware development:
+    - [ ] SDMMC + USB MSC.
+    - [ ] SDMMC + HTTP.
+    - [ ] SDMMC + USB MSC + HTTP.
+- [ ] Software developemnt.
+    - [ ] Basic utility functions (backend).
+    - [ ] UI development (frontend).
+    - [ ] Testing.
+
+# Ideas.
+- [ ] Alternative communication method for IOT device over internet with certain level of security.
