@@ -22,13 +22,18 @@
     - USB-OTG FS.
 - Software:
     - SDMMC (interfacing with SD card).
-    - HTTP (file transfering), mDNS.
+    - HTTP (file transfering).
     - tinyUSB (USB library).
+    - VFS.
 
 # Development process.
 - [ ] firmware development:
-    - [ ] SDMMC + TinyUSB => Normal USB MSC.
+    - [x] SDMMC + TinyUSB => Normal USB MSC.
     - [ ] SDMMC + VFS + HTTP => HTTP file server.
+        - [x] Read/download.
+        - [ ] Upload.
+        - [ ] Delete.
+    - [ ] Locking and access switching mechanism for USB and HTTP.
     - [ ] Problem: TinyUSB can work it direct memory access but VFS still unknown.
 - [ ] Software developemnt.
     - [ ] Basic utility functions (backend).
@@ -37,7 +42,7 @@
 
 # Issues.
 - [ ] HTTP server started but not response to ping or request.
-- [ ] Wifi authentication fail something.
+- [ ] Wifi authentication fail sometime.
 - [ ] SDMMC return error 0x107.
 
 # Ideas.
