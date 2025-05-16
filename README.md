@@ -27,13 +27,18 @@
 
 # Development process.
 - [ ] firmware development:
-    - [ ] SDMMC + USB MSC.
-    - [ ] SDMMC + HTTP.
-    - [ ] SDMMC + USB MSC + HTTP.
+    - [ ] SDMMC + TinyUSB => Normal USB MSC.
+    - [ ] SDMMC + VFS + HTTP => HTTP file server.
+    - [ ] Problem: TinyUSB can work it direct memory access but VFS still unknown.
 - [ ] Software developemnt.
     - [ ] Basic utility functions (backend).
     - [ ] UI development (frontend).
     - [ ] Testing.
+
+# Issues.
+- [ ] HTTP server started but not response to ping or request.
+- [ ] Wifi authentication fail something.
+- [ ] SDMMC return error 0x107.
 
 # Ideas.
 - [ ] Alternative communication method for IOT device over internet with certain level of security.
