@@ -35,7 +35,7 @@
         - [ ] Delete.
     - [ ] Locking and access switching mechanism for USB and HTTP.
     - [ ] Problem: TinyUSB can work it direct memory access but VFS still unknown.
-        - Mentioned [this](https://github.com/espressif/esp-idf/issues/12990) but still no solution yet.
+        - Mentioned in [this](https://github.com/espressif/esp-idf/issues/12990) but still no concrete solution yet.
 - [ ] Software developemnt.
     - [ ] Basic utility functions (backend).
     - [ ] UI development (frontend).
@@ -50,7 +50,7 @@
 - [x] SDMMC return error 0x107.
     - Look like it was power supply issue, pretent it fixed for now.
 - [ ] ESP32 HTTPD send imcomplete response or hang on to it.
-- [ ] Upload and download content is really show. Increase buffer size of VFS may fix (haven't tested yet)?
+- [ ] Upload and download content is really slow. Increase buffer size of VFS may fix (haven't tested yet)?
 
 # Ideas.
 - [ ] Alternative communication method for IOT device over internet with certain level of security.
