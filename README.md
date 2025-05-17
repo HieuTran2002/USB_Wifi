@@ -31,19 +31,27 @@
     - [x] SDMMC + TinyUSB => Normal USB MSC.
     - [ ] SDMMC + VFS + HTTP => HTTP file server.
         - [x] Read/download.
-        - [ ] Upload.
+        - [x] Upload.
         - [ ] Delete.
     - [ ] Locking and access switching mechanism for USB and HTTP.
     - [ ] Problem: TinyUSB can work it direct memory access but VFS still unknown.
+        - Mentioned [this](https://github.com/espressif/esp-idf/issues/12990) but still no solution yet.
 - [ ] Software developemnt.
     - [ ] Basic utility functions (backend).
     - [ ] UI development (frontend).
     - [ ] Testing.
 
 # Issues.
-- [ ] HTTP server started but not response to ping or request.
-- [ ] Wifi authentication fail sometime.
-- [ ] SDMMC return error 0x107.
+- [x] HTTP server started but not response to ping or request.
+    - Soldering 'in-out' connector cause power supply to be unstable. Unsoldering it.
+- [x] Wifi authentication fail sometime.
+    - Company's wifi has some issue so ESP32 cannot connect to.
+    - Add retry when fail as insurrance.
+- [x] SDMMC return error 0x107.
+    - Look like it was power supply issue, pretent it fixed for now.
+- [ ] ESP32 HTTPD send imcomplete response or hang on to it.
+- [ ] Upload and download content is really show. Increase buffer size of VFS may fix (haven't tested yet)?
 
 # Ideas.
 - [ ] Alternative communication method for IOT device over internet with certain level of security.
+- [ ] External RAM to beef up VFS performance.
